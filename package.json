@@ -6,6 +6,7 @@
   "keywords": [
     "gatsby",
     "gatsby-transformer",
+    "gatsby-transformer-geojson",
     "geojson"
   ],
   "license": "MIT",
@@ -19,5 +20,5 @@
       "build": "babel src --out-dir .",
       "prepublish": "yarn build"
     },
-    "version": "1.0.1"
+    "version": "1.0.0"
   }
