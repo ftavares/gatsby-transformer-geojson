@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-transformer-geojson",
+  "description": "A Gatsby transformer plugin to transform resources from GeoJson format",
+  "author": "Fabio Tavares <fabio.martins.tavares@gmail.com>",
+  "repository": "https://github.com/ftavares/gatsby-transformer-geojson.git",
+  "keywords": [
+    "gatsby",
+    "gatsby-transformer",
+    "geojson"
+  ],
+  "license": "MIT",
+    "devDependencies": {
+      "@babel/cli": "^7.2.0",
+      "@babel/core": "^7.2.2",
+      "@babel/polyfill": "^7.0.0",
+      "@babel/preset-env": "^7.2.0"
+    },
+    "scripts": {
+      "build": "babel src --out-dir .",
+      "prepublish": "yarn build"
+    },
+    "version": "1.0.1"
+  }
