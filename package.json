@@ -5,6 +5,7 @@
   "repository": "https://github.com/ftavares/gatsby-transformer-geojson.git",
   "keywords": [
     "gatsby",
+    "gatsby-plugin",
     "gatsby-transformer",
     "gatsby-transformer-geojson",
     "geojson"
