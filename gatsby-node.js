@@ -13,15 +13,14 @@ async function onCreateNode({
     createParentChildLink
   } = actions;
 
-  function transformObject(obj, id, type, relativePath) {
+  function transformObject(obj, id, type) {
     const jsonNode = { ...obj,
       id,
       children: [],
       parent: node.id,
       internal: {
         contentDigest: createContentDigest(obj),
-        type,
-        relativePath
+        type
       }
     };
     createNode(jsonNode);
@@ -40,10 +39,10 @@ async function onCreateNode({
 
   if (_.isArray(parsedContent)) {
     parsedContent.forEach((obj, i) => {
-      transformObject(obj, obj.id ? obj.id : createNodeId(`${node.id} [${i}] >>> GEOJSON`), 'GeoJson', node.relativePath);
+      transformObject(obj, obj.id ? obj.id : createNodeId(`${node.id} [${i}] >>> GEOJSON`), 'GeoJson');
     });
   } else if (_.isPlainObject(parsedContent)) {
-    transformObject(parsedContent, parsedContent.id ? parsedContent.id : createNodeId(`${node.id} >>> GEOJSON`), 'GeoJson', node.relativePath);
+    transformObject(parsedContent, parsedContent.id ? parsedContent.id : createNodeId(`${node.id} >>> GEOJSON`), 'GeoJson');
   }
 }
 
